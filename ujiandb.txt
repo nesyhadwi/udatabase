@@ -1,0 +1,35 @@
+CREATE DATABASE apotek_nesyha;
+
+CREATE TABLE tb_obat (kode_obat VARCHAR (4), nama_obat VARCHAR (50), jenis VARCHAR (50), satuan VARCHAR (10), stok VARCHAR (3), harga_beli VARCHAR (10), harga_jual VARCHAR (10));
+
+INSERT INTO tb_obat (kode_obat, nama_obat, jenis, satuan, stok, harga_beli, harga_jual) VALUES ('K001', 'Allerin 120 cc', 'Obat Terbatas', 'Botol', '50', '20000', '22000');
+INSERT INTO tb_obat (kode_obat, nama_obat, jenis,satuan, stok, harga_beli, harga_jual) VALUES ('K002', 'Becombion 110 ml', 'Obat Bebas', 'Botol', '10', '15000', '16000');
+INSERT INTO tb_obat (kode_obat, nama_obat, jenis, satuan, stok, harga_beli, harga_jual) VALUES ('K003', 'Becombion', 'Obat Bebas', 'Botol', '5', '8000', '9000');
+INSERT INTO tb_obat (kode_obat, nama_obat, jenis, satuan, stok, harga_beli, harga_jual) VALUES ('K004', 'Betadine Vag Plus', 'Obat Bebas', 'Botol', '12', '12000', '13000');
+INSERT INTO tb_obat (kode_obat, nama_obat, jenis, satuan, stok, harga_beli, harga_jual) VALUES ('K005', 'Komix', 'Obat Bebas', 'Lembar', '50', '4500', '5000');
+INSERT INTO tb_obat (kode_obat, nama_obat, jenis, satuan, stok, harga_beli, harga_jual) VALUES ('K006', 'Deazepam', 'Obat Obat Keras', 'Tablet', '4', '55000', '60000');
+INSERT INTO tb_obat (kode_obat, nama_obat, jenis, satuan, stok, harga_beli, harga_jual) VALUES ('K007', 'CTM', 'Obat Bebas', 'Tablet', '3', '70000', '75000');
+INSERT INTO tb_obat (kode_obat, nama_obat, jenis, satuan, stok, harga_beli, harga_jual) VALUES ('K008', 'Amoxillin', 'Obat Bebas', 'Tablet', '74', '975', '1100');
+INSERT INTO tb_obat (kode_obat, nama_obat, jenis, satuan, stok, harga_beli, harga_jual) VALUES ('K009', 'Antimo', 'Obat Bebas', 'Tablet', '2', '5100', '6000');
+INSERT INTO tb_obat (kode_obat, nama_obat, jenis, satuan, stok, harga_beli, harga_jual) VALUES ('K010', 'Parasetamol', 'Obat Bebas', 'Strips', '100', '3000', '4000');
+
+SELECT * FROM `tb_obat` WHERE satuan='Botol';
+
+SELECT * FROM `tb_obat` WHERE jenis='Obat Obat Keras' OR jenis='Obat Terbatas';
+
+SELECT * FROM `tb_obat` WHERE stok < 50;
+
+SELECT * FROM `tb_obat` WHERE satuan!='tablet';
+
+SELECT * FROM `tb_obat` WHERE jenis='Obat Bebas' ORDER BY harga_jual ASC;
+
+6. SELECT * FROM `tb_obat` WHERE harga_beli BETWEEN 10000 AND 100000 AND satuan='Botol';
+
+7. SELECT * FROM `tb_obat` WHERE jenis='Obat Bebas' AND stok >= 5;
+
+8. SELECT * FROM `tb_obat` WHERE nama_obat LIKE 'B%';
+
+9. SELECT * FROM `tb_obat` WHERE nama_obat LIKE '%om%';
+
+12. SELECT * FROM `tb_obat` WHERE kode_obat='K001' OR kode_obat='K003' OR kode_obat='K005' OR kode_obat= 'K007';
+

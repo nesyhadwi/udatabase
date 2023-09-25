@@ -33,3 +33,11 @@ SELECT * FROM `tb_obat` WHERE jenis='Obat Bebas' ORDER BY harga_jual ASC;
 
 12. SELECT * FROM `tb_obat` WHERE kode_obat='K001' OR kode_obat='K003' OR kode_obat='K005' OR kode_obat= 'K007';
 
+10. SELECT satuan, SUM(stok) AS total_stok FROM tb_obat GROUP BY satuan;
+
+13. SELECT nama_obat, stok, harga_beli, harga_jual, (stok * harga_beli) AS total_harga_beli, (stok * harga_jual) AS total_harga_jual, ((stok * harga_beli) - (stok * harga_jual)) AS laba FROM tb_obat;
+
+14. SELECT satuan, AVG(harga_jual) AS rata_rata_harga_jual FROM tb_obat WHERE satuan!='Lembar' GROUP BY satuan;
+
+15. SELECT MAX(harga_beli) AS harga_beli_tertinggi, MIN(harga_beli) AS harga_beli_terendah FROM tb_obat WHERE harga_beli;
+

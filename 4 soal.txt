@@ -1,0 +1,7 @@
+1. SELECT employee. * , jobs. * FROM employee JOIN jobs ON employee.id_job = jobs.id_job WHERE gender = "M";
+
+2. SELECT employee. * , jobs. * FROM employee LEFT JOIN jobs ON employee.id_job = jobs.id_job WHERE place_birth = "Bandung\r\n" OR place_birth = "Jakarta\r\n";
+
+3. SELECT employee. * , jobs. * FROM employee LEFT JOIN jobs ON employee.id_job = jobs.id_job ORDER BY date_birth DESC;
+
+4. SELECT employee. * , jobs. * FROM employee LEFT JOIN jobs ON employee.id_job = jobs.id_job WHERE jobs.id_job IS null;
